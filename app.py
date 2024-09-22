@@ -1,7 +1,11 @@
 from flask import Flask
-from controllers.election_controller import get_election_results, get_district_results, get_division_results
+from controllers.election_controller import get_overall_results, get_election_results, get_district_results, get_division_results
 
 app = Flask(__name__)
+
+@app.route('/api/overall', methods=['GET'])
+def overall_results():
+    return get_overall_results()
 
 @app.route('/api/election', methods=['GET'])
 def election_results():
