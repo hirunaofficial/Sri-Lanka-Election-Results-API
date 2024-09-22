@@ -26,9 +26,9 @@ def fetch_election_results():
                 'votes_received': votes_received,
                 'percentage': percentage
             })
-        return {'title': title, 'results': results}
+        return {'message': title, 'results': results}
     else:
-        return {'error': 'Failed to fetch the page.'}
+        return {'message': 'Failed to fetch the result.'}
 
 
 def fetch_district_results(district):
@@ -51,9 +51,9 @@ def fetch_district_results(district):
                 'votes_received': votes_received,
                 'percentage': percentage
             })
-        return {'title': title, 'results': results}
+        return {'message': title, 'results': results}
     else:
-        return {'error': 'Failed to fetch the page.'}
+        return {'message': 'Failed to fetch the result.'}
 
 
 def fetch_division_results(district, division):
@@ -76,6 +76,6 @@ def fetch_division_results(district, division):
                 'votes_received': votes_received,
                 'percentage': percentage
             })
-        return {'title': title, 'results': results}
+        return {'message': title, 'results': results}
     else:
-        return {'error': 'Failed to fetch the page.'}
+        return {'message': 'Failed to fetch the result.'}
